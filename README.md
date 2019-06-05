@@ -1,11 +1,11 @@
 # lab-02
 
-Number and name of feature: ________________________________
+Number and name of feature: Feature #1: Display images
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 45 minutes
 
-Start time: _____
+Start time: 11:15 am
 
-Finish time: _____
+Finish time: 12:30pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 1 hr 15
