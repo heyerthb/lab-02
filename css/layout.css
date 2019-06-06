@@ -1,0 +1,10 @@
+#photo-template {
+  float: left;
+  margin-left: 20px;
+}
+
+img {
+  height: 250px;
+  border: 1px solid black;
+  
+}
