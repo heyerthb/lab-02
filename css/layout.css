@@ -8,3 +8,10 @@ img {
   border: 1px solid black;
   
 }
+
+/* section {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+} */
