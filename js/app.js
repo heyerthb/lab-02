@@ -32,6 +32,8 @@ function displayHorns(animals) {
     $newAnimal.find('img').attr('src', animals.image_url);
     $newAnimal.find('h2').text(animals.title);
     $newAnimal.find('p').text(animals.description);
+    $newAnimal.attr('class', animals.keyword);
+    // $newAnimal.removeId('photo-template');
 
     $('main').append($newAnimal);
   });
@@ -52,18 +54,18 @@ function makedropDown(animals) {
   console.log('keyword arr', keywordsArray)
 }
 
-function attachListeners() {
+function attachListeners(keywordsArray) {
 
   $('select').on('change', event => {
     const $choice = $(event.target);
     const type = $choice.val();
-    if (type === 'narwhal'){
-      $('main').hide();
-    }
-    console.log('chin');
-  })
-}
-    
+    console.log(type);
+    $('section').hide();
+    $(`.${type}`).show();
+   
+      
+});
+}   
 
 
 
