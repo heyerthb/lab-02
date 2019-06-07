@@ -1,6 +1,12 @@
-#photo-template {
-  float: left;
-  margin-left: 20px;
+* {
+  font-family: 'Indie Flower', cursive;
+}
+
+main {
+  display:grid;
+  grid-template: 1fr / 1fr 1fr 1fr
+  /* float: left;
+  margin-left: 20px; */
 }
 
 img {
@@ -9,9 +15,3 @@ img {
   
 }
 
-/* section {
-  display: flex;
-  flex-flow: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-} */
