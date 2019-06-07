@@ -7,19 +7,33 @@
     <title>The Gallery of Horns</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    <script id="photo-template" type="text/x-handlebars-template">
+    
+      <section class="photo-template">
+        <h2>{{title}}</h2>
+        <img id="image" src="" alt="">
+        <p>{{description}}</p>
+      </section>
+    
+    </script>
   </head>
   
   <body>
     <header>
       <h1>The Gallery of Horns</h1>
-
+      <nav>
+        <ul> 
+          <li data-page="1">Page 1</li>
+          <li data-page="2">Page 2</li>
+        </ul>
+      </nav>
       <select>
         <!-- <option value="default">Filter by Keyword</option> -->
       </select>
     </header>
     
     <main>
-      <section id="photo-template">
+      <section class="photo-template">
         <h2></h2>
         <img id="image" src="" alt="">
         <p></p>

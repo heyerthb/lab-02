@@ -1,14 +1,18 @@
 'use strict';
+var pageNum = 1;
+// var keywordsArray = [];
 
 function startApp() {
+  
+  loadCurrentPage(pageNum);
 
   attachListeners();
 
-  loadData();
+  loadData(pageNum);
 
 }
 
-function loadData() {
+function loadData(pageNum) {
 
   // const success = animals => console.log('animals', animals);
   const success = animals => {
@@ -18,23 +22,23 @@ function loadData() {
 
 
   const failure = error => console.error(error);
-
-  $.get('data/page-1.json', 'json')
+  
+  $.get(`data/page-${pageNum}.json`, 'json')
     .then(success)
     .catch(failure);
-
 }
 
 function displayHorns(animals) {
+  
   animals.forEach(animals => {
-    const $newAnimal = $('#photo-template').clone();
-
+    const $newAnimal = $('.photo-template').clone();
+    
     $newAnimal.find('img').attr('src', animals.image_url);
     $newAnimal.find('h2').text(animals.title);
     $newAnimal.find('p').text(animals.description);
     $newAnimal.attr('class', animals.keyword);
-    // $newAnimal.removeId('photo-template');
-
+    $newAnimal.addClass('animalCard');
+    
     $('main').append($newAnimal);
   });
 }
@@ -55,26 +59,26 @@ function makedropDown(animals) {
 }
 
 function attachListeners(keywordsArray) {
-
+let type = 'photo-template';
   $('select').on('change', event => {
     const $choice = $(event.target);
-    const type = $choice.val();
-    console.log(type);
+    type = $choice.val();
     $('section').hide();
     $(`.${type}`).show();
-   
+  });
+
+    //pages listener
+    $('li').on('click', event =>{
+      pageNum = $(event.target).attr('data-page');
+      console.log(pageNum);
       
+      $('.animalCard').remove();
+            
+      loadData(pageNum);
+     
+     
+       
 });
 }   
-
-
-
-  // pages
-//   $('nav li').on('click', event => {
-//     const pageNum = $(event.target).attr('data-page');
-
-//     showCurrentPage(pageNum);
-//   });
-// }
 
 $(startApp);
