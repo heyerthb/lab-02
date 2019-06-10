@@ -7,11 +7,11 @@
     <title>The Gallery of Horns</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
-    <script id="photo-template" type="text/x-handlebars-template">
+    <script id="horns-template" type="text/x-handlebars-template">
     
-      <section class="photo-template">
+      <section class="photo-templatee">
         <h2>{{title}}</h2>
-        <img id="image" src="" alt="">
+        <img id="image" src="{{image_url}}" alt="">
         <p>{{description}}</p>
       </section>
     
@@ -45,6 +45,8 @@
     </footer>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"
+        integrity="sha256-ngJY93C4H39YbmrWhnLzSyiepRuQDVKDNCWO2iyMzFw=" crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
   
   </body>

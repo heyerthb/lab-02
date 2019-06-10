@@ -5,13 +5,13 @@
 main {
   display:grid;
   grid-template: 1fr / 1fr 1fr 1fr
-  /* float: left;
-  margin-left: 20px; */
+ 
 }
 
 img {
   height: 250px;
   border: 1px solid black;
+  max-width: 300px;
   
 }
 
